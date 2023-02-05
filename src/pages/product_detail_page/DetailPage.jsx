@@ -7,16 +7,19 @@ import Footer from '../landing_page/Footer'
 import Reviews from './Reviews'
 
 
-
-ReactDOM.createRoot(document.getElementById('leaf')).render(
-  <React.StrictMode>
-    <Nav />
+const DetailPage = () =>{
+    return (
+        <>
+           <Nav />
     <About_products />
     <Reviews />
     <Footer />.
+        </>
+    )
+}
+ 
 
-  </React.StrictMode>,
-)
 
-export default  Detail_page
+
+export default  DetailPage
 

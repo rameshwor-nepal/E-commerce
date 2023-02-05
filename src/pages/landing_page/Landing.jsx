@@ -13,11 +13,12 @@ import Just_for_you from './Just_for_you'
 import Services from './Services'
 import Footer from './Footer'
 
+const  Landing = () =>{
+  return (
+<div className='bg-blue-200'>
 
 
-  ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <Nav />
+      <Nav/>
     <Lower_navbar />
     <Hero_section />
     <Shop />
@@ -28,10 +29,12 @@ import Footer from './Footer'
     <Services />
     <Footer />
 
+</div>
+    
+  )
+}
 
-  </React.StrictMode>,
-)
 
-export default landing_page
+  
 
-
+export default Landing

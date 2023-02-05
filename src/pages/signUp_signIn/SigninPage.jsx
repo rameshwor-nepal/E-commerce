@@ -11,18 +11,20 @@ import Forget_password from './Forget_password'
 
 
 
-ReactDOM.createRoot(document.getElementById('leaf')).render(
-  <React.StrictMode>
-    <Nav />
+
+const SigninPage = () =>{
+  return (
+    <>
+        <Nav />
     <Seller_signin />
     <Buyer_signin />
     <Login />
     <Forget_password />
     <Footer />
-   
+   </>
+  )
+}
    
 
-  </React.StrictMode>,
-)
 
-export default  Signin_page
+export default  SigninPage

@@ -1,10 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Nav = () => {
   return (
     <div className='h-28 pt-8 bg-gray-50 text-black flex space-x-32 drop-shadow-md'>
 
-      <div className='text-4xl ml-28'>LOGO</div>
+      <div className='text-4xl ml-28'><Link to="/">LOGO</Link></div>
 
       <div className='w-[35rem] h-14 border-2 border-blue-400 rounded-md flex '>
 
@@ -57,7 +58,11 @@ const Nav = () => {
             <i class="fa-solid fa-user text-2xl text-blue-600 pl-3"></i>
             </div>
             <div>
+
+              <Link to="/signin-page">
+
               Sign In
+              </Link>
             </div>
           </li>
 

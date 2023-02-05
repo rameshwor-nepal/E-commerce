@@ -1,5 +1,6 @@
 import React from 'react'
 import laptop_bg from "../../images/laptop_bg.jpg"
+import InputField from './InputField'
 
 const Seller_signin = () => {
   return (
@@ -23,28 +24,9 @@ const Seller_signin = () => {
                     <p className='text-[24px] font-medium px-20 py-10 text-blue-500'>
                         Create Buyer Account
                     </p>
-
-                    <p className='text-[14px] font-medium px-20  '>
-                        Your Name
-                    </p>
-                    <div className=' ml-20 mt-2'>
-                        <input type="text" className='h-10 w-[20rem] pl-3 border-2 border-purple-300 rounded-md placeholder:text-[12px]' placeholder='Enter your name' />
-                    </div>
-
-
-                    <p className='text-[14px] font-medium px-20 mt-6 '>
-                        Mobile Number or Email Address
-                    </p>
-                    <div className=' ml-20 mt-2'>
-                        <input type="text" className='h-10 w-[20rem] pl-3 border-2 border-purple-300 rounded-md placeholder:text-[12px]' placeholder='Enter your mobile number or email address' />
-                    </div>
-
-                    <p className='text-[14px] font-medium px-20 mt-6 '>
-                        Password
-                    </p>
-                    <div className=' ml-20 mt-2'>
-                        <input type="password" className='h-10 w-[20rem] pl-3 border-2 border-purple-300 rounded-md placeholder:text-[12px]' placeholder='Enter your password' />
-                    </div>
+                    <InputField title="Your Name" type="text" placeholder="Enter your name"/>
+                    <InputField title="Mobile Number" type='text' placeholder="Enter your mobile number or email address"/>
+                    <InputField title="Password" type="password" placeholder="Enter Your password"/>
 
                     <p className='text-[14px] font-medium px-20 mt-6 '>
                         Re-type Password
