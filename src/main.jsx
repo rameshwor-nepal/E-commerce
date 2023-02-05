@@ -1,15 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Detail_page from "./pages/product_detail_page/Detail_page";
-import Signin_page from "./pages/signUp_signIn/Signin_page";
+import { BrowserRouter } from "react-router-dom";
 
-import Landing_page from "./pages/landing_page/Landing";
 import App from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
 root.render(
-  <React.StrictMode>
+  <BrowserRouter>
     <App />
-  </React.StrictMode>
+  </BrowserRouter>
 );
