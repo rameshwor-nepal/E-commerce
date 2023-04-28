@@ -1,4 +1,4 @@
-import About_products from "../../components/About_products";
+import About_products from "../../components/AboutProducts";
 import Nav from "../../components/Nav";
 import Footer from "../../components/Footer";
 import Reviews from "../../components/Reviews";

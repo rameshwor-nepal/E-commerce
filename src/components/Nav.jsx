@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import logo from '../assets/logo.png'
 
 const Nav = () => {
   return (
     <div className="h-28 pt-8 bg-gray-50 text-black flex space-x-32 drop-shadow-md">
-      <div className="text-4xl ml-28">
-        <Link to="/">LOGO</Link>
+      <div className=" ml-28">
+        <Link to="/"> <img src={ logo } alt="" className="w-16 h-16" /></Link>
       </div>
 
       <div className="w-[35rem] h-14 border-2 border-blue-400 rounded-md flex ">
@@ -27,33 +28,37 @@ const Nav = () => {
       <div className="">
         <ul className="pt-1 flex space-x-12">
           <li>
+            <Link to="/mycart">
             <div>
               <i className="fa-solid fa-cart-plus text-2xl text-blue-600"></i>
             </div>
-            <div>Cart</div>
+            <p>Cart</p></Link>
           </li>
 
           <li>
+            <Link to="/wishlist">
             <div>
               <i className="fa-solid fa-heart-circle-plus text-2xl text-blue-600 pl-3"></i>
             </div>
-            <div>Wishlist</div>
+            <p>WishList</p></Link>
           </li>
 
           <li>
+             <Link to="/mycart">
             <div>
-              <i class="fa-solid fa-right-left text-2xl text-blue-600 pl-12"></i>
+              <i className="fa-solid fa-right-left text-2xl text-blue-600 pl-12"></i>
             </div>
-            <div>Return and Order</div>
+           <p>Return & Order</p></Link>
           </li>
 
-          <li>
+          <li> 
+            <Link to="/buyer-sign-in">
             <div>
-              <i class="fa-solid fa-user text-2xl text-blue-600 pl-3"></i>
+              <i className="fa-solid fa-user text-2xl text-blue-600 pl-3"></i>
             </div>
-            <div>
-              <Link to="/sign-in">Sign In</Link>
-            </div>
+            
+             <p>Sign In</p></Link>
+            
           </li>
         </ul>
       </div>

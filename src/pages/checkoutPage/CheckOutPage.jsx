@@ -1,5 +1,5 @@
 
-import Lower_navbar from "../../components/Lower_navbar";
+import Lower_navbar from "../../components/LowerNavbar";
 import ShippingAddress from "../../components/ShippingAddress";
 import Footer from "../../components/Footer";
 import Nav from "../../components/Nav";

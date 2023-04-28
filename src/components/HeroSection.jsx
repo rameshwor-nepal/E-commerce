@@ -8,7 +8,7 @@ const Hero_section = () => {
        <i className="fa-solid fa-chevron-left pr-1 text-[30px] text-white px-2 py-1"></i>
        </div>
 
-       <div className='ml-[11rem] mt-48'>
+       <div className='ml-[6rem] mt-48'>
             <p className='ml-[6rem] text-white text-4xl font-bold'>
                 New Branded
             </p>
@@ -26,7 +26,7 @@ const Hero_section = () => {
         
        </div>
 
-       <div className='ml-24'>
+       <div className='ml-28'>
         <img src= {jacket} alt="Male Jacket" className='w-[35rem] h-[42rem]' />
        </div>
 

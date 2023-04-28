@@ -1,16 +1,16 @@
 import React from 'react'
 import Nav from '../../components/Nav'
 import Footer from '../../components/Footer'
-import MyCart from '../../components/MyCart'
+import Forget_password from "../../components/ForgetPassword";
 
-const MyCartPage = () => {
+const ForgetPassword = () => {
   return (
-    <>
+   <>
         <Nav />
-        <MyCart />
+        <Forget_password />
         <Footer />
-    </>
+   </>
   )
 }
 
-export default MyCartPage
+export default ForgetPassword

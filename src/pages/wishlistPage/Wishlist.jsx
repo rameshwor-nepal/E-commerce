@@ -1,16 +1,19 @@
 import React from 'react'
+
 import Nav from '../../components/Nav'
 import Footer from '../../components/Footer'
-import MyCart from '../../components/MyCart'
+import WishList from '../../components/WishList'
 
-const MyCartPage = () => {
+const Wishlist = () => {
   return (
     <>
+
         <Nav />
-        <MyCart />
+        <WishList />
         <Footer />
+
     </>
   )
 }
 
-export default MyCartPage
+export default Wishlist
