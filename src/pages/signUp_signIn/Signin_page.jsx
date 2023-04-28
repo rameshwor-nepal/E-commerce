@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Nav from "../landing_page/Nav";
-import Footer from "../landing_page/Footer";
-import Seller_signin from "./Seller_signin";
-import Buyer_signin from "./Buyer_signin";
-import Login from "./Login";
-import Forget_password from "./Forget_password";
+import Nav from "../../components/Nav";
+import Footer from "../../components/Footer";
+import Seller_signin from "../../components/Seller_signin";
+import Buyer_signin from "../../components/Buyer_signin";
+import Login from "../../components/Login";
+import Forget_password from "../../components/Forget_password";
 
 function Signin_page() {
   return (

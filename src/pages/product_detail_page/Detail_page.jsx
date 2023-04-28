@@ -1,7 +1,7 @@
-import About_products from "./About_products";
-import Nav from "../landing_page/Nav";
-import Footer from "../landing_page/Footer";
-import Reviews from "./Reviews";
+import About_products from "../../components/About_products";
+import Nav from "../../components/Nav";
+import Footer from "../../components/Footer";
+import Reviews from "../../components/Reviews";
 
 function Detail_page() {
   return (

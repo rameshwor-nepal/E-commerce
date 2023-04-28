@@ -1,7 +1,8 @@
-import Nav from "../landing_page/Nav";
-import Lower_navbar from "../landing_page/Lower_navbar";
-import ShippingAddress from "./ShippingAddress";
-import Footer from "../landing_page/Footer";
+
+import Lower_navbar from "../../components/Lower_navbar";
+import ShippingAddress from "../../components/ShippingAddress";
+import Footer from "../../components/Footer";
+import Nav from "../../components/Nav";
 
 function landing_page() {
   return (
