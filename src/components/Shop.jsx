@@ -1,10 +1,11 @@
 import React from 'react'
-import pasal from "../assets/pasal.png"
 import star from "../assets/star.png"
+
+import { featuredShop } from '../data/featuredShop'
 
 const Shop = () => {
   return (
-    <section className='bg-gray-100 h-full drop-shadow-md'>
+    <section className='bg-gray-100 h-fit mb-12 drop-shadow-md'>
         <div className='flex space-x-[65rem] pt-16'>
             <p className=' ml-20  text-black  text-3xl font-bold'>
                 Featured Shop
@@ -13,17 +14,22 @@ const Shop = () => {
                 View More
             </button>
         </div>
+        
+{/*  start of main div*/}
+    <div className='grid grid-cols-4 gap-y-12 mt-12 ml-12 pb-16'>
+            
+    { featuredShop.map((featuredShop, id) =>(      
 
-        <div className='bg-white drop-shadow-md ml-20 mt-20 h-[23rem] w-[21rem] '>
-            <div className='mt-8 ml-6 mr-6 mb-5  pl-1 pt-6 bg-slate-300'>
-                <img src={pasal} alt="suppliers" />
+        <div className='bg-white drop-shadow-md pb-5 h-fit w-[20rem] ' key={id}>
+            <div className='mt-8 ml-4 mr-5 mb-5  pl-1 pt-6 bg-slate-300'>
+                <img src={ featuredShop.image } alt="suppliers" />
             </div>
-            <div className='pl-6'>
+            <div className='pl-4'>
                 <p className='mt-1'>
-                    Raju's Hardware and Computer Suppliers
+                    { featuredShop.name }
                 </p>
                 <p className='mt-1'>
-                    New-Road, Kathmandu, Nepal
+                    { featuredShop.address }
                 </p>
                 <div className='flex space-x-1 mt-1'>
                     <img src={star} alt="star" className=' h-4 w-4' />
@@ -31,40 +37,16 @@ const Shop = () => {
                     <img src={star} alt="star" className=' h-4 w-4' />
                 </div>
                 <p className='mt-1'>
-                    <span className='font-medium'>120</span> Followers
+                    <span className='font-medium'>{ featuredShop.number_of_followers}</span> Followers
                 </p>
             </div>
 
         </div>
+    ))}   
+    </div>
 
-       
 
-        <div className='bg-white drop-shadow-md  ml-20 mb-20  h-[23rem] w-[21rem] '>
-            <div className='mt-8 ml-6 mr-6 mb-5  pl-1 pt-6 bg-slate-300'>
-                <img src={pasal} alt="suppliers" />
-            </div>
-            <div className='pl-6'>
-                <p className='mt-1'>
-                    Raju's Hardware and Computer Suppliers
-                </p>
-                <p className='mt-1'>
-                    New-Road, Kathmandu, Nepal
-                </p>
-                <div className='flex space-x-1 mt-1'>
-                    <img src={star} alt="star" className=' h-4 w-4' />
-                    <img src={star} alt="star" className=' h-4 w-4' />
-                    <img src={star} alt="star" className=' h-4 w-4' />
-                </div>
-                <p className='mt-1'>
-                    <span className='font-medium'>120</span> Followers
-                </p>
-            </div>
-
-        </div>
-
-       </section>
-
-    
+ </section>   
   )
 }
 
