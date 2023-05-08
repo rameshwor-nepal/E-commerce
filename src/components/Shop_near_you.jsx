@@ -20,8 +20,8 @@ const Shop_near_you = () => {
             { featuredShop.map((featuredShop, id) =>(      
         
                 <div className='bg-white drop-shadow-md pb-5 h-fit w-[20rem] ' key={id}>
-                    <div className='mt-8 ml-4 mr-5 mb-5  pl-1 pt-6 bg-slate-300'>
-                        <img src={ featuredShop.image } alt="suppliers" />
+                    <div className='mt-8 ml-4 mr-5 mb-5 bg-slate-300'>
+                        <img src={ featuredShop.image } alt="suppliers" className='h-[15rem] w-[20rem]'/>
                     </div>
                     <div className='pl-4'>
                         <p className='mt-1'>

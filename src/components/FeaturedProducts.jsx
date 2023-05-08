@@ -3,11 +3,13 @@ import star from "../assets/star.png"
 import cart from "../assets/add-to-cart.svg"
 import buy_button from "../assets/buy-button.svg"
 import detail from "../assets/detail.svg"
+import { Link } from 'react-router-dom'
 
-import { featuredProductsData } from '../data/featuredProductsData'
+import  featuredProductsData  from '../data/featuredProductsData'
 
 
-const Featured_products = () => {
+const Featured_products = ({addToCart}) => {
+    
     return (
         <section className='bg-gray-100 h-fit mb-12 drop-shadow-md'>
             <div className='flex space-x-[65rem] pt-16'>
@@ -25,19 +27,24 @@ const Featured_products = () => {
 
             {featuredProductsData.map((featuredProduct, id) => (
 
-            <div className='bg-white drop-shadow-md pb-5 h-fit  w-[18rem] '>
+
+            <div className='bg-white drop-shadow-md pb-5 h-fit  w-[18rem] ' key={id}>
+
                 <div className='m-6  pl-1 pt-6'>
                     <img src={featuredProduct.image} alt="suppliers" className='h-[12rem] w-[15rem]' />
                 </div>
+
+             <Link to={`detail-page/${id}`}>
+
                 <div className='pl-6'>
                     <p className='mt-1 font-medium'>
                         {featuredProduct.name}
                     </p>
-                    <p className='mt-1 text-[12px] w-[16rem]'>
+                    <p className='mt-1 text-[12px] w-[16rem] h-[50px] overflow-hidden'>
                        {featuredProduct.description}
 
                     </p>
-                    <div className='flex space-x-1 mt-2'>
+                    <div className='flex space-x-1 pt-2'>
                         <img src={star} alt="star" className=' h-4 w-4' />
                         <img src={star} alt="star" className=' h-4 w-4' />
                         <img src={star} alt="star" className=' h-4 w-4' />
@@ -45,14 +52,25 @@ const Featured_products = () => {
                     </div>
                     <p className='mt-2'>
                         $<span className='font-medium'>{featuredProduct.price}</span>
-                    </p>
+                    </p>  
+                    
+                    </div>
+                </Link>
 
-                    <div className='flex mt-2 space-x-6'>
-                        <div className='rounded full border-2 border-purple-800 h-10 w-10'>
-                            <img src={cart} alt="Add To Cart" className='h-8 w-8 pl-1 pt-1' />
-                        </div>
+                    <div className='flex mt-2 pl-6 space-x-6'>
+                        {/* <Link 
+                        to={"mycart/"}
+                        state={addToCart}
+                        > */}
+                        
+                            <button className='rounded full border-2 border-purple-800 h-10 w-10'
+                                onClick={ () => addToCart(featuredProduct)} >
+                                <img src={cart} alt="Add To Cart" className='h-8 w-8 pl-1 pt-1' />
+                            </button>
+                        {/* </Link> */}
+                     
 
-                        <div className='rounded full border-2 border-purple-800 h-[3rem] w-[3rem]'>
+                        <div className='rounded full border-2 border-purple-800 h-[3rem] w-[3rem]' >
                             <img src={buy_button} alt="Buy Button" className='h-9 w-9 pl-1 pt-1 fill-purple-800' />
                         </div>
 
@@ -60,55 +78,10 @@ const Featured_products = () => {
                             <img src={detail} alt="Detail" className='h-8 w-8 pl-1 pt-1' />
                         </div>
                     </div>
-                </div>
-
-            </div> 
+              
+              
+            </div>
      ))}
-
-{/* 
-            <div className='bg-white drop-shadow-md pb-5 h-fit w-[18rem] '>
-                <div className='m-6  pl-1 pt-6'>
-                    <img src={pasal} alt="suppliers" className='h-[12rem] w-[15rem]' />
-                </div>
-                <div className='pl-6'>
-                    <p className='mt-1 font-medium'>
-                        Leather Shoes
-                    </p>
-                    <p className='mt-1 text-[12px] w-[17rem]'>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt
-                        expedita eius minima maxime, laboriosam aut perspiciatis.
-
-                    </p>
-                    <div className='flex space-x-1 mt-2'>
-                        <img src={star} alt="star" className=' h-4 w-4' />
-                        <img src={star} alt="star" className=' h-4 w-4' />
-                        <img src={star} alt="star" className=' h-4 w-4' />
-                        <img src={star} alt="star" className=' h-4 w-4' />
-                    </div>
-                    <p className='mt-2'>
-                        $<span className='font-medium'>120</span>
-                    </p>
-
-                    <div className='flex mt-2 space-x-6'>
-                        <div className='rounded full border-2 border-purple-800 h-10 w-10'>
-                            <img src={cart} alt="Add To Cart" className='h-8 w-8 pl-1 pt-1' />
-                        </div>
-
-                        <div className='rounded full border-2 border-purple-800 h-[3rem] w-[3rem]'>
-                            <img src={buy_button} alt="Buy Button" className='h-9 w-9 pl-1 pt-1 fill-purple-800' />
-                        </div>
-
-                        <div className='rounded full border-2 border-purple-800 h-10 w-10'>
-                            <img src={detail} alt="Detail" className='h-8 w-8 pl-1 pt-1' />
-                        </div>
-                    </div>
-                </div>
-
-            </div> */}
-
-
-
-
         </div>
 
         </section>

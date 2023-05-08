@@ -5,7 +5,7 @@ import cart from "../assets/add-to-cart.svg"
 import buy_button from "../assets/buy-button.svg"
 import detail from "../assets/detail.svg"
 
-import { featuredProductsData } from '../data/featuredProductsData'
+import  featuredProductsData  from '../data/featuredProductsData'
 
 const Just_for_you = () => {
     return (
@@ -27,7 +27,7 @@ const Just_for_you = () => {
 
                 {featuredProductsData.map((featuredProduct, id) => (
 
-                    <div className='bg-white drop-shadow-md pb-5 h-fit  w-[18rem] '>
+                    <div className='bg-white drop-shadow-md pb-5 h-fit  w-[18rem] '  key={id}>
                         <div className='m-6  pl-1 pt-6'>
                             <img src={featuredProduct.image} alt="suppliers" className='h-[12rem] w-[15rem]' />
                         </div>
@@ -35,7 +35,7 @@ const Just_for_you = () => {
                             <p className='mt-1 font-medium'>
                                 {featuredProduct.name}
                             </p>
-                            <p className='mt-1 text-[12px] w-[16rem]'>
+                            <p className='mt-1 text-[12px] w-[16rem] h-[50px] overflow-hidden'>
                                 {featuredProduct.description}
 
                             </p>

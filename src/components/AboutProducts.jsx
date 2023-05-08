@@ -1,28 +1,37 @@
 import React from 'react'
 import star from '../assets/star.png'
-import jacket2 from '../assets/jacket2.png'
 import two_jacket from '../assets/two_jacket.png'
 import jacket_wearing from '../assets/jacket_wearing.png'
 
+import { useParams } from 'react-router-dom'
+import featuredProductsData  from '../data/featuredProductsData'
+import AskedQuestion from './AskedQuestion'
+import Banner from './Banner'
+
 
 const About_products = () => {
+
+  const {id } = useParams();
+  const product = featuredProductsData.find((product) => product.id === id )
+  const { image, description, name, price } = product
+
   return (
     <div>
       <div className='flex space-x-24 mt-16 ml-28 '>
           <div>
               <div className='drop-shadow-md h-[22rem] w-[28rem] bg-white  ml-40 hover:bg-yellow-200'>
-                  <img src={jacket2} alt="Jacket 2" className='h-[22rem] w-[18rem] ml-[4.5rem]'/>
+                  <img src={image} alt="Jacket 2" className='h-[22rem] w-[18rem] ml-[4.5rem]'/>
               </div>
 
               <div className='flex space-x-8 mt-8' >
                   <div className='drop-shadow-md h-[8rem] w-[8rem] bg-white ml-40 hover:bg-blue-200' >
-                      <img src={jacket2} alt="Jacket 2" className='h-[8rem] w-[6rem] ml-4 '/>
+                      <img src={image} alt="Jacket 2" className='h-[8rem] w-[6rem] ml-4 '/>
                   </div>
                   <div className='drop-shadow-md h-[8rem] w-[8rem] bg-white ml-40 hover:bg-blue-200'>
-                      <img src={jacket2} alt="Jacket 2" className='h-[8rem] w-[6rem] ml-4 '/>
+                      <img src={image} alt="Jacket 2" className='h-[8rem] w-[6rem] ml-4 '/>
                   </div>
                   <div className='drop-shadow-md h-[8rem] w-[8rem] bg-white ml-40 hover:bg-blue-200'>
-                      <img src={jacket2} alt="Jacket 2" className='h-[8rem] w-[6rem] ml-4 '/>
+                      <img src={image} alt="Jacket 2" className='h-[8rem] w-[6rem] ml-4 '/>
                   </div>
               </div>
 
@@ -38,7 +47,7 @@ const About_products = () => {
           <div >
 
               <p className='text-4xl font-medium'>
-                New Men's Leather Jacket
+               {name}
               </p>
 
               <div className='flex space-x-1 mt-8'>
@@ -52,10 +61,10 @@ const About_products = () => {
                         </p>
               </div>
               <p className='text-[16px] mt-6'>
-                Top and best seller leather jacket in Nepalese Market
+                {description}
               </p>
               <p className='text-[20px] mt-6'>
-                Rs. <span>2,000</span>
+                Rs. <span>{price}</span>
                 <span>
                   <button className='w-20 h-7 ml-20 bg-red-500 text-white font-normal text-[16px]  rounded-full'> Sale</button>
                 </span>
@@ -210,91 +219,11 @@ const About_products = () => {
 
       {/* banner */}
 
-      <div className=' mt-10 h-[10rem] bg-blue-300 flex space-x-40 '>
-        <div className='ml-64 mt-[2.4rem]' >
-         <i className="fa-solid fa-recycle text-5xl text-purple-700 pl-10"></i>
-              <p className='text-[24px] font-medium'>
-                Re-cyclable
-              </p>
-        </div>
-
-        <div className=' mt-[2.4rem]' >
-        <i className="fa-solid fa-biohazard text-5xl text-purple-700 pl-10 "></i>
-              <p className='text-[24px] font-medium'>
-                Degradable
-              </p>
-        </div>
-
-        <div className=' mt-[2.4rem]' >
-        <i className="fa-brands fa-cotton-bureau text-5xl text-purple-700 pl-5"></i>
-              <p className='text-[24px] font-medium'>
-                Pure Silk
-              </p>
-        </div>
-
-        <div className=' mt-[2.4rem]' >
-        <i className="fa-solid fa-leaf text-5xl text-purple-700 pl-14 "></i>
-              <p className='text-[24px] font-medium'>
-                100% Natural
-              </p>
-        </div>
-      </div>
+        <Banner />
 
       {/*  Frequently asked questions */}
 
-      <div className='mt-10 ml-[28rem]'>
-                    <p className='text-[24px] font-medium ml-[10rem]'>Frequently Asked Questions</p>
-
-                    <div className='w-[40rem] mt-10 bg-purple-300 p-6 rounded-xl '>
-
-                        <p className='font-medium'>
-                          What are the actual ingredient used?<span className='ml-[16rem]'><i className="fa-solid fa-chevron-up"></i></span>
-                        </p>
-
-                        
-
-                        <p className='mt-4'>
-                            A leather jacket is an outerwear garment made from durable leather with a waist-length cut. 
-                          The durability and warmth of leather offer broad utility, and even the most basic leather 
-                          jacket styles have aesthetic appeal. Leather jackets are traditionally cowhide, but they can 
-                          also be goatskin, lambskin, or sheepskin.
-                        </p>
-
-                    </div>
-
-                    <div className='w-[40rem] mt-5 bg-purple-300 p-5 rounded-xl '>
-
-                        <p className='font-medium'>
-                          What are the actual ingredient used?<span className='ml-[16rem]'><i className="fa-solid fa-chevron-down"></i></span>
-                        </p>
-
-                    </div>
-
-                    <div className='w-[40rem] mt-5 bg-purple-300 p-5 rounded-xl '>
-
-                        <p className='font-medium'>
-                          What are the actual ingredient used?<span className='ml-[16rem]'><i className="fa-solid fa-chevron-down"></i></span>
-                        </p>
-
-                    </div>
-
-                    <div className='w-[40rem] mt-5 bg-purple-300 p-5 rounded-xl '>
-
-                        <p className='font-medium'>
-                          What are the actual ingredient used?<span className='ml-[16rem]'><i className="fa-solid fa-chevron-down"></i></span>
-                        </p>
-
-                    </div>
-
-                    <div className='w-[40rem] mt-5 bg-purple-300 p-5 rounded-xl '>
-
-                        <p className='font-medium'>
-                          What are the actual ingredient used?<span className='ml-[16rem]'><i className="fa-solid fa-chevron-down"></i></span>
-                        </p>
-
-                    </div>
-
-                  </div>
+      <AskedQuestion />
 
     </div>
   )

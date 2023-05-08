@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from '../assets/logo.png'
 
-const Nav = () => {
+const Nav = ({size}) => {
   return (
     <div className="h-28 pt-8 bg-gray-50 text-black flex space-x-32 drop-shadow-md">
       <div className=" ml-28">
@@ -30,7 +30,7 @@ const Nav = () => {
           <li>
             <Link to="/mycart">
             <div>
-              <i className="fa-solid fa-cart-plus text-2xl text-blue-600"></i>
+              <i className="fa-solid fa-cart-plus text-2xl text-blue-600"></i><span className="bg-green-500 text-white h-[15px] w-[15px] rounded-xl">{size}</span>
             </div>
             <p>Cart</p></Link>
           </li>
