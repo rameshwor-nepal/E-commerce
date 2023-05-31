@@ -1,8 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from '../assets/logo.png'
+import { useContext } from "react";
+import { addToCartContext } from "../context/addToCartContext";
 
-const Nav = ({size}) => {
+const Nav = () => {
+  const a = useContext(addToCartContext)
+  const size = a.cart.length
+
   return (
     <div className="h-28 pt-8 bg-gray-50 text-black flex space-x-32 drop-shadow-md">
       <div className=" ml-28">

@@ -12,18 +12,19 @@ import ForgetPassword from "./pages/forget_password/ForgetPassword";
 
 const App = () => {
   return (
-    <Routes>
-      <Route path="/" element={<Landing_page />} />
-      <Route path="/detail-page/:id" element={<Detail_page />} />      
-      <Route path="/checkout" element = {<CheckOutPage />} />
-      <Route path="/mycart" element = {<MyCartPage />} />
-      <Route path="/wishlist" element = {<Wishlist />} />
-      <Route path="/buyer-sign-in" element={<BuyerSignIn />} />
-      <Route path="/seller-sign-in" element={<SellerSignIn />} />
-      <Route path="/log-in" element={<LogIn />} />
-      <Route path="/forget-password" element={<ForgetPassword />} />
 
+    <Routes>
+        <Route path="/" element={<Landing_page />} />
+        <Route path="/detail-page/:id" element={<Detail_page />} />      
+        <Route path="/checkout" element = {<CheckOutPage />} />
+        <Route path="/mycart" element = {<MyCartPage />} />
+        <Route path="/wishlist" element = {<Wishlist />} />
+        <Route path="/buyer-sign-in" element={<BuyerSignIn />} />
+        <Route path="/seller-sign-in" element={<SellerSignIn />} />
+        <Route path="/log-in" element={<LogIn />} />
+        <Route path="/forget-password" element={<ForgetPassword />} />
     </Routes>
+
   );
 };
 

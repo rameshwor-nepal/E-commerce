@@ -9,7 +9,7 @@ const MyCartPage = () => {
     
     <>
         <Nav />
-        <MyCart cart={cart} addToCart ={addToCart} />
+        <MyCart />
         <Footer />
     </>
   )

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import star from "../assets/star.png"
 import cart from "../assets/add-to-cart.svg"
 import buy_button from "../assets/buy-button.svg"
@@ -7,8 +7,12 @@ import { Link } from 'react-router-dom'
 
 import  featuredProductsData  from '../data/featuredProductsData'
 
+import { addToCartContext } from '../context/addToCartContext'
 
-const Featured_products = ({addToCart}) => {
+
+const Featured_products = () => {
+
+    const a = useContext(addToCartContext)
     
     return (
         <section className='bg-gray-100 h-fit mb-12 drop-shadow-md'>
@@ -58,16 +62,16 @@ const Featured_products = ({addToCart}) => {
                 </Link>
 
                     <div className='flex mt-2 pl-6 space-x-6'>
-                        {/* <Link 
+                        <Link 
                         to={"mycart/"}
-                        state={addToCart}
-                        > */}
+                    
+                        >
                         
                             <button className='rounded full border-2 border-purple-800 h-10 w-10'
-                                onClick={ () => addToCart(featuredProduct)} >
+                                onClick={ () => a.addToCart(featuredProduct)} >
                                 <img src={cart} alt="Add To Cart" className='h-8 w-8 pl-1 pt-1' />
                             </button>
-                        {/* </Link> */}
+                        </Link>
                      
 
                         <div className='rounded full border-2 border-purple-800 h-[3rem] w-[3rem]' >

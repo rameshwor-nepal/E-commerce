@@ -12,23 +12,25 @@ import { useState } from "react";
 
 function landing_page() {
 
-  const [cart, setCart ] = useState([])
+  // const [cart, setCart ] = useState([])
 
-  const addToCart = (data) =>{
-    setCart ([...cart, data])
-  }
+  // const addToCart = (data) =>{
+  //   setCart ([...cart, data])
+  // }
   return (
     <>
-      <Nav size = {cart.length} />
+    
+      <Nav />
       <Lower_navbar />
       <Hero_section />
       <Shop />
       <Shop_near_you />
       <Banner />
-      <Featured_products addToCart={addToCart} />
+      <Featured_products />
       <Just_for_you />
       <Services />
       <Footer />
+
     </>
   );
 }
