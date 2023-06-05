@@ -16,7 +16,7 @@ const App = () => {
     <Routes>
         <Route path="/" element={<Landing_page />} />
         <Route path="/detail-page/:id" element={<Detail_page />} />      
-        <Route path="/checkout" element = {<CheckOutPage />} />
+        <Route path="/mycart/checkout" element = {<CheckOutPage />} />
         <Route path="/mycart" element = {<MyCartPage />} />
         <Route path="/wishlist" element = {<Wishlist />} />
         <Route path="/buyer-sign-in" element={<BuyerSignIn />} />

@@ -1,7 +1,12 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import pasal from "../assets/leather_shoes.jpg"
 
+import { addToCartContext } from '../context/addToCartContext'
+
 const shippingAddress = () => {
+
+    const a = useContext(addToCartContext)
+
   return (
     <div className='flex'>
         <div>
@@ -98,33 +103,28 @@ const shippingAddress = () => {
         {/* end for left shipping address */}
 
         
-        <div className='ml-[10rem] mt-10 '>   {/* start for the right element */}
+
+       
+        <div className='ml-[10rem] mt-10 '>   
 
             <p className='pl-[10rem] text-[24px] font-medium'>Your items</p>
+            
+            
+            { a.cart.map((cartItem, id ) => (
 
-            <div className='flex items-center space-x-4 mt-6' >  {/*  item you have in your cart */}
+            <div className='flex items-center space-x-4 mt-6' > {/*item you have in your cart */}
                 <span >
-                    <img src={pasal} alt="suppliers" className='h-[4rem] w-[4rem]' />
+                    <img src={cartItem.image} alt="suppliers" className='h-[4rem] w-[4rem]' />
                 </span>
                 <p>
-                    Leather Shoe
+                   {cartItem.name}
                 </p>
-                <p className='pl-48'>
-                    $99.00
+                <p className='right-36 absolute'>
+                   {cartItem.price}
                 </p>
-            </div>
-
-            <div className='flex items-center space-x-4 mt-6' >  {/*  item you have in your cart */}
-                <span >
-                    <img src={pasal} alt="suppliers" className='h-[4rem] w-[4rem]' />
-                </span>
-                <p>
-                    Leather Shoe
-                </p>
-                <p className='pl-48'>
-                    $99.00
-                </p>
-            </div>
+            </div> 
+            
+            ))}
 
             <hr className='my-7' />
 

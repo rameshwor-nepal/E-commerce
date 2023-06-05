@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
-import jacket_wearing from '../assets/jacket_wearing.png'
 
 import { addToCartContext } from '../context/addToCartContext'
+import { Link } from 'react-router-dom'
 
 const MyCart = () => {
 
@@ -29,9 +29,14 @@ const MyCart = () => {
               <input type="text" value={1} name="quantity" id="" className='w-8 h-8 mx-4 text-[22px] outline-none mt-8 rounded ' />
               <button className='text-[22px] px-2 py-0 font-medium bg-black text-white'> + </button>
               <div className='flex space-x-10'>
+
+                <Link to={"checkout/"}>
+
                 <button className=' mt-8 py-1 px-4 text-[16px] bg-blue-600 text-white border-blue-400 border-l-2 rounded'>
                   Check Out
                 </button>
+
+                </Link>
 
                 <button className=' mt-8 py-1 px-4 text-[16px] bg-red-600  text-white  border-blue-400 rounded'>
                   Remove
