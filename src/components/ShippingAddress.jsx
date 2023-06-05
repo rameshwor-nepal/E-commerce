@@ -120,7 +120,7 @@ const shippingAddress = () => {
                    {cartItem.name}
                 </p>
                 <p className='right-36 absolute'>
-                   {cartItem.price}
+                   {parseFloat (cartItem.price) * cartItem.quantity}
                 </p>
             </div> 
             
@@ -143,8 +143,8 @@ const shippingAddress = () => {
                 <p className='text-[18px]'>
                     Sub Total
                 </p>
-                <p className='text-[18px] font-medium pl-[20rem]'>
-                    $198
+                <p className='text-[18px] font-medium pl-[19.85rem]'>
+                   ${a.getTotalAmount()}
                 </p>
 
             </div>
@@ -167,7 +167,7 @@ const shippingAddress = () => {
                     Total Cost
                 </p>
                 <p className='text-[20px] font-medium pl-[19rem]'>
-                    $498
+                    ${a.getTotalAmount() + parseFloat(198)}
                 </p>
 
             </div>

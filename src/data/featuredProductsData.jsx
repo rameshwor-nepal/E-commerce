@@ -14,7 +14,8 @@ import suits from "../assets/suits.jpg"
     description:
       "Stylish, black leather sneakers with white soles, lace-up design, and cushioned insoles for maximum comfort.",
     name: 'Leather Shoe',
-    price : '50'
+    price : '50',
+    quantity : 1
   },
   {
     id :'1',

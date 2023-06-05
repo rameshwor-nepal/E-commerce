@@ -7,9 +7,10 @@ import glocery from "../assets/glocery.jpg"
 import bags from "../assets/bags.jpg"
 import fruits from "../assets/fruits.jpg"
 
-export const featuredShop = [
+const featuredShop = [
 
   {
+    id :'0',
     image: pasal,
     description:
       "High-quality fashion boutique with curated collections for all styles. Friendly staff, commitment to sustainability, and eco-friendly products. Look good while minimizing environmental impact. Enjoy shopping with us!",
@@ -18,6 +19,7 @@ export const featuredShop = [
     number_of_followers : '50'
   },
   {
+    id :'1',
     image: toyshop,
     description:
       "Welcome to our toy shop! We have a wide variety of toys for all ages and interests. Come find the perfect toy and let your imagination soar!",
@@ -26,6 +28,7 @@ export const featuredShop = [
     number_of_followers : '150'
   },
   {
+    id :'2',
     image: department_store,
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ipsam, ab itaque nam perferendis impedit sint Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ipsam, ab itaque nam perferendis impedit sint",
@@ -34,6 +37,7 @@ export const featuredShop = [
     number_of_followers : '70'
   },
   {
+    id :'3',
     image: electronics,
     description:
       "Electronics store with a wide range of gadgets and devices. Quality brands at competitive prices. Friendly and knowledgeable staff to assist with purchases and provide tech support. Shop now!",
@@ -42,6 +46,7 @@ export const featuredShop = [
     number_of_followers : '30'
   },
   {
+    id :'4',
     image: fancy,
     description:
       "Indulge in luxury at our upscale boutique, featuring exquisite fashion for the discerning shopper. Impeccable service, high-end products, and a sophisticated atmosphere. Elevate your style and experience with us.",
@@ -50,6 +55,7 @@ export const featuredShop = [
     number_of_followers : '150'
   },
   {
+    id :'5',
     image: fruits,
     description:
       "Fresh fruit shop with a wide variety of high-quality produce. From local to exotic fruits, our selection is always fresh and carefully sourced. Come taste the difference!",
@@ -58,6 +64,7 @@ export const featuredShop = [
     number_of_followers : '46'
   },
   {
+    id :'6',
     image: glocery,
     description:
       "One-stop grocery shop for all your needs. Fresh produce, pantry staples, and household essentials. Quality products at affordable prices. Come visit us and make grocery shopping easy and convenient!",
@@ -66,11 +73,14 @@ export const featuredShop = [
     number_of_followers : '27'
   },
   {
+    id :'7',
     image: bags,
     description:
-"Our bag shop offers a variety of styles for any occasion. From trendy to classic, our selection is high-quality and affordable. Shop with us for the perfect accessory to complete your look." ,
+      "Our bag shop offers a variety of styles for any occasion. From trendy to classic, our selection is high-quality and affordable. Shop with us for the perfect accessory to complete your look." ,
    name: 'Family Food',
     address  : 'Patandhoka, Lalitpur, Nepal',
     number_of_followers : '37'
   },
 ];
+
+export default featuredShop

@@ -25,9 +25,9 @@ const MyCart = () => {
               <p className=" text-[14px] font-normal ">Diamond Fancy store</p>
 
               <label htmlFor="quantity" className='text-[18px] font-medium pr-4 pt-12'>Quantity</label>
-              <button className='text-[22px] px-2 font-medium bg-black text-white'> - </button>
-              <input type="text" value={1} name="quantity" id="" className='w-8 h-8 mx-4 text-[22px] outline-none mt-8 rounded ' />
-              <button className='text-[22px] px-2 py-0 font-medium bg-black text-white'> + </button>
+              <button className='text-[22px] px-2 font-medium bg-black text-white' onClick={() => a.decreaseQuantity(cartItem.id)}> - </button>
+              <input type="text" value={cartItem.quantity} name="quantity" id="" className='w-8 h-8 mx-4 text-[22px] outline-none mt-8 rounded ' />
+              <button className='text-[22px] px-2 py-0 font-medium bg-black text-white' onClick={() => a.increaseQuantity(cartItem.id)}> + </button>
               <div className='flex space-x-10'>
 
                 <Link to={"checkout/"}>
@@ -38,7 +38,7 @@ const MyCart = () => {
 
                 </Link>
 
-                <button className=' mt-8 py-1 px-4 text-[16px] bg-red-600  text-white  border-blue-400 rounded'>
+                <button className=' mt-8 py-1 px-4 text-[16px] bg-red-600  text-white  border-blue-400 rounded' onClick={() => a.removeItem(cartItem.id)} >
                   Remove
                 </button>
               </div>
@@ -47,7 +47,7 @@ const MyCart = () => {
             </div>
 
             <div className='pl-60' >
-              <p className='text-[24px] font-medium'>${cartItem.price}</p>
+              <p className='text-[24px] font-medium'>${parseFloat (cartItem.price) * cartItem.quantity}</p>
             </div>
           </div>  
           

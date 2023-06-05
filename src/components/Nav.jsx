@@ -35,7 +35,7 @@ const Nav = () => {
           <li>
             <Link to="/mycart">
             <div>
-              <i className="fa-solid fa-cart-plus text-2xl text-blue-600"></i><span className="bg-green-500 text-white h-[15px] w-[15px] rounded-xl">{size}</span>
+              <i className="fa-solid fa-cart-plus text-2xl text-blue-600"></i><span className="bg-green-500 text-white p-1 rounded-3xl">{size}</span>
             </div>
             <p>Cart</p></Link>
           </li>

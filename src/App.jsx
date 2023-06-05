@@ -9,12 +9,14 @@ import Wishlist from "./pages/wishlistPage/Wishlist";
 import SellerSignIn from "./pages/sellerSignIn/SellerSignIn";
 import LogIn from "./pages/login_page/LogIn";
 import ForgetPassword from "./pages/forget_password/ForgetPassword";
+import DetailPageShop from "./pages/detailPageShop/DetailPageShop";
 
 const App = () => {
   return (
 
     <Routes>
         <Route path="/" element={<Landing_page />} />
+        <Route path="/shop-detail/:id" element = { <DetailPageShop />} />
         <Route path="/detail-page/:id" element={<Detail_page />} />      
         <Route path="/mycart/checkout" element = {<CheckOutPage />} />
         <Route path="/mycart" element = {<MyCartPage />} />

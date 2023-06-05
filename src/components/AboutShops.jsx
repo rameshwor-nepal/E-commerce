@@ -1,22 +1,20 @@
-import React, {useContext} from 'react'
+import React from 'react'
 import star from '../assets/star.png'
-import two_jacket from '../assets/two_jacket.png'
-
 import { Link } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
-import featuredProductsData  from '../data/featuredProductsData'
+import featuredShop  from '../data/featuredShop'
 import AskedQuestion from './AskedQuestion'
 import Banner from './Banner'
-import { addToCartContext } from '../context/addToCartContext'
 
 
-const About_products = () => {
+
+
+const AboutShop = () => {
 
   const {id } = useParams();
-  const product = featuredProductsData.find((product) => product.id === id )
-  const { image, description, name, price } = product
+  const shop = featuredShop.find((shop) => shop.id === id )
+  const { image, description, name, address, number_of_followers } = shop
 
-  const a = useContext(addToCartContext)
 
   return (
     <div>
@@ -40,7 +38,7 @@ const About_products = () => {
 
               <div className='mt-24 drop-shadow-md h-[34.5rem] w-[38.5rem] bg-yellow-200  ml-30 hover:bg-blue-200'>
 
-                <img src= {two_jacket} alt="Two Jacket" className='pt-[3.25rem] pl-10' />
+                <img src= {image} alt="Two Jacket" className='pt-[3.25rem] pl-10 h-[500px] w-[500px]' />
 
               </div>
 
@@ -52,6 +50,7 @@ const About_products = () => {
               <p className='text-4xl font-medium'>
                {name}
               </p>
+              <p className='pt-4'>{address}</p>
 
               <div className='flex space-x-1 mt-8'>
                         <img src={star} alt="star" className=' h-4 w-4' />
@@ -66,57 +65,30 @@ const About_products = () => {
               <p className='text-[16px] mt-6'>
                 {description}
               </p>
-              <p className='text-[20px] mt-6'>
-                Rs. <span>{price}</span>
-                <span>
-                  <button className='w-20 h-7 ml-20 bg-red-500 text-white font-normal text-[16px]  rounded-full'> Sale</button>
-                </span>
+           
+             <p className=' mt-6 px-6 py-1 w-[15rem] bg-blue-500 text-white font-normal text-[24px]  rounded-full'>
+                     {number_of_followers} <span className='ml-3 text-[20px]'> Followers</span>
               </p>
 
 
-              <div>
-
-              <Link to={"../mycart/"}>
-                            
-                <button className='w-[20rem] h-11 mr-20 mt-10  text-blue-600 font-normal  border-2 border-blue-600  rounded-full'
-                onClick={ () => a.addToCart(product)}>
-
-                  Add To Cart
-
-                </button>  
-             </Link>           
-               </div>
-
-               <div>
-                  <button className='w-[20rem] h-11 mr-20 mt-4 bg-blue-600 text-white font-normal   rounded-full'>
-
-                    Buy with <span className='text-2xl font-medium'> E-sewa</span>
-
-                  </button> 
-                  <p className='ml-20 mt-4 underline underline-offset-8 '>
-
-                    More payment Options
-
-                  </p>             
-               </div>
 
 {/* For the discription of products */}
             <div>             
 
               <p className='text-4xl font-medium mt-16'>
-                Why people are loving this products?
+                Why people are loving our Shop?
               </p>
 
               <p className='mt-5 text-[16px] font-normal w-[40rem] '>
-                A leather jacket is an outerwear garment made from durable leather with a waist-length cut. 
-                The durability and warmth of leather offer broad utility, and even the most basic leather 
-                jacket styles have aesthetic appeal. Leather jackets are traditionally cowhide, but they can 
-                also be goatskin, lambskin, or sheepskin.
+              A cozy boutique brimming with unique treasures, where timeless elegance meets modern flair. 
+              Our shop invites you to indulge in a captivating collection of handcrafted goods, from delicate jewelry
+               and artisanal ceramics to stylish accessories and curated home decor. Discover your own piece of artistry and 
+               sophistication amidst our carefully curated selection.
 
               <br /><br />
-                In addition to being luxurious and versatile, a well-cut leather jacket will look great for years 
-                to come. It's important to recognize that leather jackets encompass three crucial qualities: they're 
-                durable, comfortable and impeccably stylish.
+              A bustling shop nestled in the heart of the city, adorned with vibrant colors and an inviting ambiance. It showcases a
+               diverse range of products that cater to every need and desire. From exquisite fashion pieces to exquisite home
+                decor, this shop is a treasure trove of delights for discerning shoppers.
               </p>
 
               <hr className="h-px my-4 bg-gray-200 border-0 dark:bg-gray-700"></hr>
@@ -143,7 +115,7 @@ const About_products = () => {
                 </span>
 
                 <span className='ml-4 text-[20px] font-medium '>
-                  Ingredients
+                  Location
                 </span>
 
                 <span className='float-right '>
@@ -158,7 +130,7 @@ const About_products = () => {
                 </span>
 
                 <span className='ml-4 text-[20px] font-medium '>
-                  How to use
+                  How to contact
                 </span>
 
                 <span className='float-right'>
@@ -173,7 +145,7 @@ const About_products = () => {
                 </span>
 
                 <span className='ml-4 text-[20px] font-medium '>
-                  Shipping
+                  Staffs
                 </span>
 
                 <span className='float-right'>
@@ -218,4 +190,4 @@ const About_products = () => {
   )
 }
 
-export default About_products
+export default AboutShop
