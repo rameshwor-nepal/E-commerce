@@ -11,7 +11,7 @@ const Shop_near_you = () => {
                 <p className=' ml-20  text-black  text-3xl font-bold'>
                     Shop Near You
                 </p>
-                <button className=' w-28 h-9 mr-20  text-blue-600 font-normal  border-2 border-blue-600  rounded-full'>
+                <button className=' w-28 h-9 mr-20  text-blue-600 font-normal  border-2 border-blue-600  rounded-full hover:border-none hover:bg-blue-600 hover:text-white'>
                     View More
                 </button>
             </div>
@@ -20,7 +20,7 @@ const Shop_near_you = () => {
 
                 {featuredShop.map((featuredShop, id) => (
 
-                    <div className='bg-white drop-shadow-md pb-5 h-fit w-[20rem] ' key={id}>
+                    <div className='bg-white drop-shadow-md pb-5 h-fit w-[20rem] hover:scale-[1.02] delay-75' key={id}>
                               <Link to={`shop-detail/${id}`}>
                         <div className='mt-8 ml-4 mr-5 mb-5 bg-slate-300'>
                             <img src={featuredShop.image} alt="suppliers" className='h-[15rem] w-[20rem]' />

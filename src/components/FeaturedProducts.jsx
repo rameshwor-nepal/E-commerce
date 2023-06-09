@@ -20,7 +20,7 @@ const Featured_products = () => {
                 <p className=' ml-20  text-black  text-3xl font-bold'>
                     Featured Products
                 </p>
-                <button className=' w-28 h-9 mr-20  text-blue-600 font-normal  border-2 border-blue-600  rounded-full'>
+                <button className=' w-28 h-9 mr-20  text-blue-600 font-normal  border-2 border-blue-600  rounded-full hover:border-none hover:bg-blue-600 hover:text-white'>
                     View More
                 </button>
             </div>
@@ -32,7 +32,7 @@ const Featured_products = () => {
                 {featuredProductsData.map((featuredProduct, id) => (
 
 
-                    <div className='bg-white drop-shadow-md pb-5 h-fit  w-[18rem] ' key={id}>
+                    <div className='bg-white drop-shadow-md pb-5 h-fit  w-[18rem] hover:scale-[1.02] delay-75' key={id}>
 
                         <Link to={`detail-page/${id}`}>
                             <div className='m-6  pl-1 pt-6'>
@@ -63,13 +63,15 @@ const Featured_products = () => {
                         </Link>
 
                         <div className='flex mt-2 pl-6 space-x-6'>
-                            <Link to={"mycart/"} >
+                            {/* <Link to={"mycart/"} > */}
 
                                 <button className='rounded full border-2 border-purple-800 h-10 w-10 hover:bg-blue-100'
                                     onClick={() => a.addToCart(featuredProduct)} >
                                     <img src={cart} alt="Add To Cart" className='h-8 w-8 pl-1 pt-1' />
                                 </button>
-                            </Link>
+                                
+
+                            {/* </Link> */}
 
 
                             <button className='rounded full border-2 border-purple-800 h-[3rem] w-[3rem] hover:bg-blue-100' >
@@ -84,6 +86,8 @@ const Featured_products = () => {
 
                     </div>
                 ))}
+                {/* <p>{a.messages}</p> */}
+                
             </div>
 
         </section>

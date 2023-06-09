@@ -11,7 +11,7 @@ const Shop = () => {
                 <p className=' ml-20  text-black  text-3xl font-bold'>
                     Featured Shop
                 </p>
-                <button className=' w-28 h-9 mr-20  text-blue-600 font-normal  border-2 border-blue-600  rounded-full'>
+                <button className=' w-28 h-9 mr-20  text-blue-600 font-normal  border-2 border-blue-600  rounded-full hover:border-none hover:bg-blue-600 hover:text-white'>
                     View More
                 </button>
             </div>
@@ -23,7 +23,7 @@ const Shop = () => {
 
                     
 
-                        <div className='bg-white drop-shadow-md pb-5 h-fit w-[20rem] ' key={id}>
+                        <div className='bg-white drop-shadow-md pb-5 h-fit w-[20rem] hover:scale-[1.02] delay-75' key={id}>
 
                             <Link to={`shop-detail/${id}`}>
 

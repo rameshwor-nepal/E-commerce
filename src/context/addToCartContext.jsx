@@ -7,9 +7,11 @@ export const addToCartContext = createContext();
 export const AddToCartState = (props) =>{
 
     const [cart, setCart ] = useState([])
+    const [messages , setMessages] = useState("")
 
     const addToCart = (data) =>{
       setCart ([...cart, {...data, quantity :1 }])
+      setMessages(alert(`${data.name} is added successfully!!`))
     }
 
     const getTotalAmount = () => {
@@ -46,7 +48,7 @@ export const AddToCartState = (props) =>{
       };
 
     return (
-        <addToCartContext.Provider value={{cart , addToCart, getTotalAmount, increaseQuantity, removeItem, decreaseQuantity}}>
+        <addToCartContext.Provider value={{cart, messages , addToCart, getTotalAmount, increaseQuantity, removeItem, decreaseQuantity}}>
             {props.children}
         </addToCartContext.Provider>
     )
