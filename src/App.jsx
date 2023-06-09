@@ -23,7 +23,7 @@ const App = () => {
         <Route path="/wishlist" element = {<Wishlist />} />
         <Route path="/buyer-sign-in" element={<BuyerSignIn />} />
         <Route path="/seller-sign-in" element={<SellerSignIn />} />
-        <Route path="/log-in" element={<LogIn />} />
+        <Route path="/login" element={<LogIn />} />
         <Route path="/forget-password" element={<ForgetPassword />} />
     </Routes>
 
